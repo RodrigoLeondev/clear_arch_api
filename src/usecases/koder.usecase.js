@@ -1,4 +1,4 @@
-const {Koder} = require("../models/koder.model")
+const Koder = require("../models/koder.model")
 const mongoose = require("mongoose")
 
 /* Usecase */
@@ -8,8 +8,8 @@ const getAll = () => {
   return koders
 }
 
-const getById = async (id) => {
-  const koder = await Koder.findById(id)
+const getById = (id) => {
+  const koder = Koder.findById(id)
   return koder
 }
 
